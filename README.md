@@ -3,6 +3,7 @@ rails_utils
 A collection of some Rails utilities & custom Gems. These are little go-to's that I wrote when I noticed I was constantly writing the same report 
 ## klass_factory
 The wait is over! KlassFactory will formulate deeply nested objects into full-fledged ruby classes. This class acts as an anonymous class generator for arbitrary hashes and arrays. 
+turn this:
 ```ruby
 {:foo= > "bar", :baz => { :first => "A", :second => [1,2,{:third => "B"}]}}
 ``` 
