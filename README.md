@@ -8,7 +8,7 @@ The wait is over! KlassFactory will formulate deeply nested objects into full-fl
 ``` 
 into
 ```ruby
-<K:0x000000033158c8 @foo="bar", @baz=#<Baz:0x00000003315120 @first="A", @second=[#<Second:0x000000033146a8>,<Second:0x00000003314220>, #<Second:0x000000032fbdb0 @third="B">]
+<K:0x000000033158c8 @foo="bar", @baz=<Baz:0x00000003315120 @first="A", @second=[<Second:0x000000033146a8>,<Second:0x00000003314220>, <Second:0x000000032fbdb0 @third="B">]
 ```
 KlassFactory works by implementing an already defined class instance and adding class variables by attribute key. For keyed nested objects, KlassFactory creates defined classes based from the keys. 
 
