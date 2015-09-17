@@ -29,4 +29,19 @@ instance_k = K.new {:foo= > "bar", :baz => { :first => "A", :second => [1,2,{:th
 ```
 
 You may wish to validate and groom your attributes before calling KlassFactory. 
-  
+
+## Recursive Symbolize Keys
+This is a useful script for console testing as well as ensuring hashes are symbolized before operating on them. Ruby allows you to convert a hash key identifier to a symbol but it will only work on the top level of a hash. Consider:
+```ruby
+> myhash = {"chow"=>"mein", "recipe"=> { "ingredients" => [ "noodles","sauce"], "step_one" => "get noodles" } }
+> myhash.symbolize_keys!
+ => {:chow=>"mein", :recipe=>{"ingredients"=>["noodles", "sauce"], "step_one"=>"get noodles"}}
+ ```
+ the keys in the recipe hash are not symbolized.
+ Enter rsk!
+ ```ruby
+ > require '~/rails_utils/recursive_symbolize_keys.rb'
+ => true 
+> rsk! myhash
+ => {:chow=>"mein", :recipe=>{:ingredients=>["noodles", "sauce"], :step_one=>"get noodles"}} 
+  ```
