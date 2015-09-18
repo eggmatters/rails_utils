@@ -64,6 +64,8 @@ class KlassFactory
               attr_hash = KlassFactory.depthify property
               KlassFactory.assign_attributes child, attr_hash[:flat]
               attach_children child, attr_hash[:deep]
+            else
+              child = property
             end
             child_array.push child
           end
