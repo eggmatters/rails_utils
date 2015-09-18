@@ -20,12 +20,12 @@ Using this class is simple. Simply define your container class and call the stat
 ```ruby
 class K
   def initialize attrs = {}
-    intance = KlassFactory.init self, attrs
+    instance = KlassFactory.init self, attrs
     return instance
   end
 end
 # initialize above hash by:
-instance_k = K.new {:foo= > "bar", :baz => { :first => "A", :second => [1,2,{:third => "B"}]}}
+instance_k = K.new {:foo => "bar", :baz => { :first => "A", :second => [1,2,{:third => "B"}]}}
 ```
 
 You may wish to validate and groom your attributes before calling KlassFactory. 
