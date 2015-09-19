@@ -165,6 +165,8 @@ class WidgetsController < ApplicationController
     end
   end
 ```
+### Known Issues
 
+In the current implementation of setting Yapi as a library, It's a toss up as to whether the CRUD methods will be loaded or not. See http://stackoverflow.com/questions/31323140/library-class-methods-arent-loaded-by-rails for details. Turn class caching off if you get the same behavior mentioned in the SO article.
 
 
